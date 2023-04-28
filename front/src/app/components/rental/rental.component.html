@@ -1,0 +1,35 @@
+<table mat-table [dataSource]="rentals" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let rental"> {{rental.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="user">
+      <th mat-header-cell *matHeaderCellDef> User </th>
+      <td mat-cell *matCellDef="let rental"> {{rental.user.username}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="movie">
+      <th mat-header-cell *matHeaderCellDef> Movie </th>
+      <td mat-cell *matCellDef="let rental"> {{rental.movie.title}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="rentalDate">
+      <th mat-header-cell *matHeaderCellDef> Rental Date </th>
+      <td mat-cell *matCellDef="let rental"> {{rental.rentalDate | date}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="returnDate">
+      <th mat-header-cell *matHeaderCellDef> Return Date </th>
+     
+      <td mat-cell *matCellDef="let rental"> {{rental.returnDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="available">
+    <th mat-header-cell *matHeaderCellDef> Available </th>
+    <td mat-cell *matCellDef="let rental"> {{rental.available ? 'Yes' : 'No'}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
