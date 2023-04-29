@@ -56,3 +56,7 @@ El objetivo principal de este proyecto es proporcionar un entorno de aplicación
 Para ejecutar las pruebas en el frontend, utiliza el comando `ng test`. Las pruebas se ejecutarán automáticamente utilizando Karma y Jasmine.
 
 Para ejecutar las pruebas en el backend, utiliza el comando `mvn test`.
+
+## Estado
+
+El proyecto está aún sin finalizar ya que voy añadiendo los features a lo largo del tiempo.
