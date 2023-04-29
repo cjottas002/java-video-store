@@ -42,14 +42,14 @@ El objetivo principal de este proyecto es proporcionar un entorno de aplicación
 2. Navega al directorio del frontend en la línea de comandos.
 3. Ejecuta `npm install` para instalar las dependencias.
 4. Ejecuta `ng serve` para iniciar el servidor de desarrollo de Angular.
-5. Abre un navegador web y navega a `http://localhost:4200`.
+5. Abre un navegador web y navega a `https://localhost:4200`.
 
 ### Backend
 
 1. Asegúrate de tener Java y Maven instalados en tu sistema.
 2. Navega al directorio del backend en la línea de comandos.
 3. Ejecuta `mvn spring-boot:run` para iniciar la aplicación Spring Boot.
-4. La API REST estará disponible en `http://localhost:8080`.
+4. La API REST estará disponible en `https://localhost:8843`.
 
 ## Pruebas
 
