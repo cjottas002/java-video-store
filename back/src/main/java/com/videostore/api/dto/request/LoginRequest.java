@@ -1,4 +1,4 @@
-package com.videostore.api.dto;
+package com.videostore.api.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;

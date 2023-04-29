@@ -1,6 +1,5 @@
 package com.videostore.api.dto.response;
 
-import com.videostore.api.dto.LoginResponse;
 import lombok.Data;
 
 @Data

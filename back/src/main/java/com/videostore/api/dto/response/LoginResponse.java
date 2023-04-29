@@ -1,4 +1,4 @@
-package com.videostore.api.dto;
+package com.videostore.api.dto.response;
 
 import lombok.Data;
 
