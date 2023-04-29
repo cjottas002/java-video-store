@@ -20,8 +20,11 @@ import java.util.concurrent.Future;
 @Service
 public class AuthServiceImpl implements AuthService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public AuthServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
 
     @Override
@@ -53,28 +56,30 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public User register(@NotNull User user) {
-        // Check if a user with the same username already exists
+
         User existingUser = userRepository.findByUsername(user.getUsername());
         if (existingUser != null) {
-            // A user with the same username already exists
+
             throw new RuntimeException("A user with this username already exists.");
         }
 
-        // Save the new user in the database
+
         return userRepository.save(user);
     }
 
     public void verifyToken(String jwtToken) {
         try {
+
             Algorithm algorithm = Algorithm.HMAC256("secretKey");
             DecodedJWT jwt = JWT.require(algorithm)
                     .build()
                     .verify(jwtToken);
+
             String username = jwt.getSubject();
             String role = jwt.getClaim("role").asString();
-            // Do something with the username and role...
+
         } catch (JWTVerificationException e) {
-            // Invalid token...
+
         }
     }
 }

@@ -12,8 +12,11 @@ import java.util.UUID;
 @Service
 public class RentalServiceImpl implements RentalService {
 
-    @Autowired
-    private RentalRepository rentalRepository;
+    private final RentalRepository rentalRepository;
+
+    public RentalServiceImpl(RentalRepository rentalRepository) {
+        this.rentalRepository = rentalRepository;
+    }
 
     @Override
     public List<Rental> findAll() {

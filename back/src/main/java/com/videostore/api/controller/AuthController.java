@@ -17,8 +17,11 @@ import java.util.concurrent.Future;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    @Autowired
-    AuthService authService;
+    final AuthService authService;
+
+    public AuthController(AuthService authService) {
+        this.authService = authService;
+    }
 
 
     @PostMapping("/login")
